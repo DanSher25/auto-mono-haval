@@ -86,17 +86,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  Fancybox.bind("[data-fancybox='']", {
-    closeButton: true,
-    autoFocus: false,
-    backdropClick: false,
-    on: {
-      done: () => {
-        initPhoneMask();
-      },
-    },
-  });
+   const initSalesSlider = () => {
+     const slider = document.querySelector(".sales__slider");
+     if (!slider) return;
 
-  initPhoneMask();
-  initHeroSlider();
+     const wrapper = slider.closest(".sales__slider-wrapper");
+     if (!wrapper) return;
+
+     const swiper = new Swiper(slider, {
+       modules: [Navigation],
+       loop: true,
+       slidesPerView: 4,
+       spaceBetween: 16,
+       navigation: {
+         nextEl: wrapper.querySelector(".sales__slider-nav--next"),
+         prevEl: wrapper.querySelector(".sales__slider-nav--prev"),
+       },
+     });
+   };
+
+   Fancybox.bind("[data-fancybox='']", {
+     closeButton: true,
+     autoFocus: false,
+     backdropClick: false,
+     on: {
+       done: () => {
+         initPhoneMask();
+       },
+     },
+   });
+
+   initPhoneMask();
+   initHeroSlider();
+   initSalesSlider();
 });

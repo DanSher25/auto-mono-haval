@@ -175,30 +175,134 @@
             </div>
           </div>
         </section>
+        <section class="test-drive">
+          <div class="container">
+            <div class="test-drive__wrapper">
+              <h2 class="test-drive__title">ЗАПИСАТЬСЯ НА ТЕСТ ДРАЙВ</h2>
+              <form action="#" class="test-drive__form form">
+                <div class="test-drive__form-wrapper">
+                  <div class="form__input-wrapper">
+                    <label for="test-drive-name" class="form__label">Имя<span class="red">*</span></label>
+                    <input type="text" class="form__input" name="name" required id="test-drive-name" />
+                  </div>
+                  <div class="form__input-wrapper">
+                    <label for="test-drive-tel" class="form__label">Телефон<span class="red">*</span></label>
+                    <input type="tel" class="form__input" name="phone" required id="test-drive-tel" />
+                  </div>
+                  <div class="form__input-wrapper">
+                    <label for="test-drive-comment" class="form__label">Комментарий</label>
+                    <textarea class="form__textarea" name="comment" id="test-drive-comment"></textarea>
+                  </div>
+                  <div class="form__checkbox">
+                    <input type="checkbox" class="form__checkbox-input" required id="test-drive-checkbox" />
+                    <label for="test-drive-checkbox" class="form__checkbox-label"
+                      >Согласие на <a href="/">обработку персональных данных</a> и на
+                      <a href="">предоставление персональных данных третьим лицам<span class="red">*</span></a>
+                    </label>
+                  </div>
+                  <button type="submit" class="form__submit">ЗАПИСАТЬСЯ НА ТЕСТ ДРАЙВ</button>
+                  <div class="form__policy">
+                    Эта страница защищена сервисом Yandex SmartCaptcha и подпадает под <a href="/">Политику конфиденциальности</a> и
+                    <a href="/">Условия использования Yandex</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="sales">
+          <div class="sales__outer">
+            <div class="container">
+              <div class="sales__wrapper">
+                <h2 class="sales__title">АКЦИИ HAVAL</h2>
+                <div class="sales__slider-wrapper">
+                   <div class="sales__slider-nav sales__slider-nav--prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M15 3l-9 9 9 9"></path></svg>
+              </div>
+              <div class="sales__slider-nav sales__slider-nav--next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" tabindex="-1"><path d="M9 3l9 9-9 9"></path></svg>
+              </div>
+                  <div class="sales__slider">
+                    <div class="swiper-wrapper">
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales1.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">Автокредит от 8.7% годовых</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales2.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">Зимняя Резина в подарок</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales3.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">Оплата двух платежей кредита</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales4.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">КАСКО в подарок</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales5.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">300 литров бензина в подарок</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                      <div class="sales__slide swiper-slide">
+                        <img src="/images/sales6.png" alt="" class="sales__slide-img" />
+                        <div class="sales__slide-info">
+                          <div class="sales__slide-title">Тотальная ликвидация склада!</div>
+                          <div class="sales__slide-text">Сроки акции ограничены</div>
+                          <a href="/" class="sales__slide-link">ЗАПИСАТЬСЯ ПО АКЦИИ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
     <div id="request-call" style="display: none">
-      <form action="#" class="request-call">
+      <form action="#" class="request-call form">
         <div class="request-call__wrapper">
           <h3 class="request-call__title">ЗАКАЗАТЬ ЗВОНОК</h3>
-          <div class="request-call__input-wrapper">
-            <label for="request-call-name" class="request-call__label">Имя<span class="red">*</span></label>
-            <input type="text" class="request-call__input" name="name" required id="request-call-name" />
+          <div class="form__input-wrapper">
+            <label for="request-call-name" class="form__label">Имя<span class="red">*</span></label>
+            <input type="text" class="form__input" name="name" required id="request-call-name" />
           </div>
-          <div class="request-call__input-wrapper">
-            <label for="request-call-tel" class="request-call__label">Телефон<span class="red">*</span></label>
-            <input type="tel" class="request-call__input" name="phone" required id="request-call-tel" />
+          <div class="form__input-wrapper">
+            <label for="request-call-tel" class="form__label">Телефон<span class="red">*</span></label>
+            <input type="tel" class="form__input" name="phone" required id="request-call-tel" />
           </div>
-          <div class="request-call__checkbox">
-            <input type="checkbox" class="request-call__checkbox-input" required id="request-call-checkbox" />
-            <label for="request-call-checkbox" class="request-call__checkbox-label"
+          <div class="form__checkbox">
+            <input type="checkbox" class="form__checkbox-input" required id="request-call-checkbox" />
+            <label for="request-call-checkbox" class="form__checkbox-label"
               >Согласие на <a href="/">обработку персональных данных</a> и на
               <a href="">предоставление персональных данных третьим лицам<span class="red">*</span></a>
             </label>
           </div>
-          <button type="submit" class="request-call__submit">ПЕРЕЗВОНИТЕ МНЕ</button>
-          <div class="request-call__policy">
+          <button type="submit" class="form__submit">ПЕРЕЗВОНИТЕ МНЕ</button>
+          <div class="form__policy">
             Эта страница защищена сервисом Yandex SmartCaptcha и подпадает под <a href="/">Политику конфиденциальности</a> и
             <a href="/">Условия использования Yandex</a>
           </div>
