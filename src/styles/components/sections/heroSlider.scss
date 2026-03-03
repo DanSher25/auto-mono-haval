@@ -1,0 +1,119 @@
+.hero-slider {
+  &__body {
+    aspect-ratio: 2560 / 720;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .swiper-wrapper {
+      height: 100%;
+    }
+  }
+  &__slide {
+    position: relative;
+    height: 100%;
+  }
+  &__img {
+    position: absolute;
+    aspect-ratio: 2560 / 720;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__info {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    text-wrap: balance;
+    max-width: 32rem;
+    font-family: "Haval", sans-serif;
+    color: var(--white);
+    padding: 0;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+  }
+  &__subtitle {
+    max-width: 28rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    color: var(--white);
+  }
+  &__link {
+    background-color: var(--accent);
+    color: var(--black);
+    padding-inline-start: 1rem;
+    padding-inline-end: 2rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 1.2rem) 100%, 0 100%);
+    font-family: "Haval", sans-serif;
+    font-weight: 300;
+    &:hover {
+      color: var(--white);
+    }
+  }
+  &__nav {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    &--prev {
+      left: 18px;
+    }
+    &--next {
+      right: 18px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #706f6c;
+      stroke-width: 2px;
+    }
+  }
+  &__pagination {
+    position: absolute;
+    left: 50% !important;
+    bottom: 20px !important;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .swiper-pagination-bullet {
+      background-color: var(--accent);
+      opacity: 0.5;
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+  &__progress {
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--pale);
+  }
+}

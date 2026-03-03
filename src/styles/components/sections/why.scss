@@ -1,0 +1,51 @@
+.why {
+  &__wrapper {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+  &__title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    font-family: "Haval", sans-serif;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  &__item {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--black-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+  &__item-title {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-family: "Haval", sans-serif;
+  }
+  &__item-text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}
