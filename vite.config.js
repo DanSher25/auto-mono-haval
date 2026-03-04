@@ -1,28 +1,12 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-// import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
   root: "src",
   base: "./",
 
   plugins: [
-    // handlebars({
-    //   partialDirectory: resolve(__dirname, "src/components"),
-    //   context: {
-    //     // breadcrumbsAbout: [{ title: "Главная", url: "/" }, { title: "О компании" }],
-    //   },
-    // }),
-    // {
-    //   name: "watch-handlebars-components",
-    //   handleHotUpdate({ file, server }) {
-    //     if (file.includes("/components/")) {
-    //       server.ws.send({
-    //         type: "full-reload",
-    //       });
-    //     }
-    //   },
-    // },
+
   ],
 
   build: {

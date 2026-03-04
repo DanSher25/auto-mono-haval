@@ -1,0 +1,31 @@
+.complectation {
+  .border-gray {
+    border-color: var(--pale);
+  }
+  .border-r {
+    border-right-width: 1px;
+  }
+  .border-b {
+    border-bottom-width: 1px;
+  }
+  .text-white {
+    color: var(--white);
+  }
+  .bg-gray {
+    background-color: var(--pale);
+  }
+  td {
+    border: 1px solid;
+  }
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
+  .md\:max-h-\[85vh\] {
+    max-height: 85vh;
+  }
+}
+
+.fancybox__content table {
+  border-collapse: separate;
+  border-spacing: 0;
+}

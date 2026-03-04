@@ -1,10 +1,19 @@
+
+
+@use "./vendor/tailwind";
 @use "./variables";
 @use "./fonts";
 @use "./common";
 @use "./components/requestCall";
 @use "./components/form";
+@use "./components/contacts";
+@use "./components/model";
+@use "./components/complectation";
 @use "./components/sections/header";
 @use "./components/sections/heroSlider";
 @use "./components/sections/why";
 @use "./components/sections/testDrive";
 @use "./components/sections/sales";
+@use "./components/sections/map";
+@use "./components/sections/footer";
+@use "./components/sections/models";

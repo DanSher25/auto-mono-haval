@@ -1,0 +1,18 @@
+.map {
+  &__outer {
+    position: relative;
+  }
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    iframe {
+      width: 100%;
+    }
+  }
+  &__contacts {
+    position: absolute;
+    left: calc(50vw + 640px - 500px - 7.5px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

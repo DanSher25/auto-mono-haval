@@ -105,10 +105,67 @@ document.addEventListener("DOMContentLoaded", () => {
      });
    };
 
-   Fancybox.bind("[data-fancybox='']", {
+   const initModelSlider = () => {
+     const sliders = document.querySelectorAll(".model__picture");
+     if (sliders.length < 0) return;
+
+     sliders.forEach((el) => {
+       const slider = el.querySelector(".model__slider");
+       const swiper = new Swiper(slider, {
+         modules: [Pagination, EffectFade],
+
+         slidesPerView: 1,
+         speed: 350,
+
+         effect: "fade",
+         fadeEffect: {
+           crossFade: true,
+         },
+
+         allowTouchMove: false,
+       });
+
+       const colors = el.querySelectorAll(".model__color");
+       const colorTitle = el.querySelector(".model__color-title");
+
+       if (colors.length > 0 && colorTitle) {
+         colorTitle.innerHTML = colors[0].getAttribute("data-color");
+         colors.forEach((color, index) => {
+           color.addEventListener("click", () => {
+             swiper.slideTo(index);
+             colors.forEach((c) => c.classList.remove("model__color--active"));
+             color.classList.add("model__color--active");
+             colorTitle.innerHTML = color.getAttribute("data-color");
+           });
+         });
+       }
+     });
+   };
+
+   const initTriggerGallery = () => {
+     const albums = document.querySelectorAll(".model__album");
+
+     if (albums.length > 0) {
+       albums.forEach((el) => {
+         el.addEventListener("click", (e) => {
+           e.preventDefault();
+
+           const gallery = el.getAttribute("data-trigger");
+           if (!gallery) return;
+
+           const galleryItems = document.querySelectorAll(`[data-fancybox="${gallery}"]`);
+
+           if (galleryItems.length) {
+             galleryItems[0].click();
+           }
+         });
+       });
+     }
+   };
+
+   Fancybox.bind("[data-fancybox], [data-fancybox-trigger]", {
      closeButton: true,
      autoFocus: false,
-     backdropClick: false,
      on: {
        done: () => {
          initPhoneMask();
@@ -119,4 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
    initPhoneMask();
    initHeroSlider();
    initSalesSlider();
+   initModelSlider();
+   initTriggerGallery();
 });
