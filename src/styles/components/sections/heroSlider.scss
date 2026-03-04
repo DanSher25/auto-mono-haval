@@ -7,6 +7,9 @@
     .swiper-wrapper {
       height: 100%;
     }
+    @media (max-width: 1024px) {
+      aspect-ratio: 1080 / 332;
+    }
   }
   &__slide {
     position: relative;
@@ -18,12 +21,23 @@
     height: 100%;
     top: 0;
     left: 0;
+    @media (max-width: 1024px) {
+      aspect-ratio: 1080 / 332;
+    }
   }
   &__info {
     padding-bottom: 2.5rem;
     padding-top: 2.5rem;
     position: relative;
     z-index: 1;
+    @media (max-width: 1280px) {
+      max-width: 1054px;
+    }
+    @media (max-width: 1024px) {
+      max-width: 1054px;
+      padding-top: 0.75rem;
+      padding-bottom: 2.5rem;
+    }
   }
   &__title {
     padding-bottom: 2.5rem;
@@ -36,6 +50,15 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 500;
+    @media (max-width: 1280px) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      max-width: 24rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
   }
   &__subtitle {
     max-width: 28rem;
@@ -45,6 +68,17 @@
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     color: var(--white);
+    @media (max-width: 1280px) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      max-width: 24rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
   &__link {
     background-color: var(--accent);
@@ -80,6 +114,9 @@
       fill: none;
       stroke: #706f6c;
       stroke-width: 2px;
+    }
+    @media (max-width: 1280px) {
+      display: none;
     }
   }
   &__pagination {

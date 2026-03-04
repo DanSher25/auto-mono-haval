@@ -11,12 +11,19 @@
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    gap: 12px;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
   &__brand {
     display: block;
     max-width: 133px;
     width: 100%;
+    @media (max-width: 768px) {
+      max-width: 113px;
+    }
   }
   &__brand-img {
     width: 100%;
@@ -26,6 +33,13 @@
     display: block;
     max-width: 186px;
     width: 100%;
+    @media (max-width: 768px) {
+      order: 2;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 133px;
+      margin-top: 0.3rem;
+    }
   }
   &__logo-img {
     width: 100%;
@@ -35,11 +49,23 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: var(--pale);
+    @media (max-width: 1024px) {
+      order: 1;
+      width: 100%;
+      text-align: center;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--accent);
+      margin-top: 0.5rem;
+    }
   }
   &__phone {
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 600;
+    @media (max-width: 640px) {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
   &__modal {
     color: var(--white);
@@ -58,9 +84,37 @@
       background-color: var(--pale);
       color: var(--white);
     }
+    @media (min-width: 768px) and (max-width: 1280px) {
+      display: none;
+    }
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+  &__modal-small {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent);
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px) and (max-width: 1280px) {
+      display: flex;
+    }
+    @media (max-width: 640px) {
+      display: flex;
+    }
+  }
+  &__modal-small-icon {
+    width: 16px;
+    height: 16px;
   }
   &__bottom {
     background-color: var(--black-bg);
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
   &__nav {
     display: flex;

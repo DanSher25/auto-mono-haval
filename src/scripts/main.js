@@ -86,96 +86,96 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-   const initSalesSlider = () => {
-     const slider = document.querySelector(".sales__slider");
-     if (!slider) return;
+  const initSalesSlider = () => {
+    const slider = document.querySelector(".sales__slider");
+    if (!slider) return;
 
-     const wrapper = slider.closest(".sales__slider-wrapper");
-     if (!wrapper) return;
+    const wrapper = slider.closest(".sales__slider-wrapper");
+    if (!wrapper) return;
 
-     const swiper = new Swiper(slider, {
-       modules: [Navigation],
-       loop: true,
-       slidesPerView: 4,
-       spaceBetween: 16,
-       navigation: {
-         nextEl: wrapper.querySelector(".sales__slider-nav--next"),
-         prevEl: wrapper.querySelector(".sales__slider-nav--prev"),
-       },
-     });
-   };
+    const swiper = new Swiper(slider, {
+      modules: [Navigation],
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: wrapper.querySelector(".sales__slider-nav--next"),
+        prevEl: wrapper.querySelector(".sales__slider-nav--prev"),
+      },
+    });
+  };
 
-   const initModelSlider = () => {
-     const sliders = document.querySelectorAll(".model__picture");
-     if (sliders.length < 0) return;
+  const initModelSlider = () => {
+    const sliders = document.querySelectorAll(".model__picture");
+    if (sliders.length < 0) return;
 
-     sliders.forEach((el) => {
-       const slider = el.querySelector(".model__slider");
-       const swiper = new Swiper(slider, {
-         modules: [Pagination, EffectFade],
+    sliders.forEach((el) => {
+      const slider = el.querySelector(".model__slider");
+      const swiper = new Swiper(slider, {
+        modules: [Pagination, EffectFade],
 
-         slidesPerView: 1,
-         speed: 350,
+        slidesPerView: 1,
+        speed: 350,
 
-         effect: "fade",
-         fadeEffect: {
-           crossFade: true,
-         },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
 
-         allowTouchMove: false,
-       });
+        allowTouchMove: false,
+      });
 
-       const colors = el.querySelectorAll(".model__color");
-       const colorTitle = el.querySelector(".model__color-title");
+      const colors = el.querySelectorAll(".model__color");
+      const colorTitle = el.querySelector(".model__color-title");
 
-       if (colors.length > 0 && colorTitle) {
-         colorTitle.innerHTML = colors[0].getAttribute("data-color");
-         colors.forEach((color, index) => {
-           color.addEventListener("click", () => {
-             swiper.slideTo(index);
-             colors.forEach((c) => c.classList.remove("model__color--active"));
-             color.classList.add("model__color--active");
-             colorTitle.innerHTML = color.getAttribute("data-color");
-           });
-         });
-       }
-     });
-   };
+      if (colors.length > 0 && colorTitle) {
+        colorTitle.innerHTML = colors[0].getAttribute("data-color");
+        colors.forEach((color, index) => {
+          color.addEventListener("click", () => {
+            swiper.slideTo(index);
+            colors.forEach((c) => c.classList.remove("model__color--active"));
+            color.classList.add("model__color--active");
+            colorTitle.innerHTML = color.getAttribute("data-color");
+          });
+        });
+      }
+    });
+  };
 
-   const initTriggerGallery = () => {
-     const albums = document.querySelectorAll(".model__album");
+  const initTriggerGallery = () => {
+    const albums = document.querySelectorAll(".model__album");
 
-     if (albums.length > 0) {
-       albums.forEach((el) => {
-         el.addEventListener("click", (e) => {
-           e.preventDefault();
+    if (albums.length > 0) {
+      albums.forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
 
-           const gallery = el.getAttribute("data-trigger");
-           if (!gallery) return;
+          const gallery = el.getAttribute("data-trigger");
+          if (!gallery) return;
 
-           const galleryItems = document.querySelectorAll(`[data-fancybox="${gallery}"]`);
+          const galleryItems = document.querySelectorAll(`[data-fancybox="${gallery}"]`);
 
-           if (galleryItems.length) {
-             galleryItems[0].click();
-           }
-         });
-       });
-     }
-   };
+          if (galleryItems.length) {
+            galleryItems[0].click();
+          }
+        });
+      });
+    }
+  };
 
-   Fancybox.bind("[data-fancybox], [data-fancybox-trigger]", {
-     closeButton: true,
-     autoFocus: false,
-     on: {
-       done: () => {
-         initPhoneMask();
-       },
-     },
-   });
+  Fancybox.bind("[data-fancybox], [data-fancybox-trigger]", {
+    closeButton: true,
+    autoFocus: false,
+    on: {
+      done: () => {
+        initPhoneMask();
+      },
+    },
+  });
 
-   initPhoneMask();
-   initHeroSlider();
-   initSalesSlider();
-   initModelSlider();
-   initTriggerGallery();
+  initPhoneMask();
+  initHeroSlider();
+  initSalesSlider();
+  initModelSlider();
+  initTriggerGallery();
 });
