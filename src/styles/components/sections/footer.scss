@@ -6,6 +6,10 @@
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     color: var(--white);
+    @media (max-width: 1024px) {
+      max-width: 794px;
+      margin: 0 auto;
+    }
   }
   &__info {
     margin-bottom: 0.5rem;

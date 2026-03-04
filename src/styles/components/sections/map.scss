@@ -7,6 +7,9 @@
     position: relative;
     iframe {
       width: 100%;
+       @media (max-width: 1024px) {
+      height: 300px;
+     }
     }
   }
   &__contacts {
@@ -14,5 +17,16 @@
     left: calc(50vw + 640px - 500px - 7.5px);
     top: 50%;
     transform: translateY(-50%);
-  }
+    @media (max-width: 1420px) {
+      left: auto;
+      right: 20px;
+    }
+     @media (max-width: 1024px) {
+      position: relative;
+      transform: none;
+      right: auto;
+      padding: 0 15px;
+      margin: 0 auto;
+     }
+    }
 }

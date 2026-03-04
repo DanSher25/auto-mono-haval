@@ -8,7 +8,7 @@
       height: 100%;
     }
     @media (max-width: 1024px) {
-      aspect-ratio: 1080 / 332;
+      aspect-ratio: unset;
     }
   }
   &__slide {
@@ -22,7 +22,15 @@
     top: 0;
     left: 0;
     @media (max-width: 1024px) {
-      aspect-ratio: 1080 / 332;
+      display: none;
+    }
+  }
+  &__img-mobile {
+    display: none;
+    aspect-ratio: 1080 / 608;
+    height: 100%;
+    @media (max-width: 1024px) {
+      display: block;
     }
   }
   &__info {
@@ -37,6 +45,7 @@
       max-width: 1054px;
       padding-top: 0.75rem;
       padding-bottom: 2.5rem;
+      background-color: var(--black);
     }
   }
   &__title {
@@ -92,6 +101,11 @@
     font-weight: 300;
     &:hover {
       color: var(--white);
+    }
+    @media (max-width: 1024px) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: inline-block;
     }
   }
   &__nav {

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         crossFade: true,
       },
 
-      allowTouchMove: false,
+      // allowTouchMove: false,
 
       navigation: {
         nextEl: slider.querySelector(".hero-slider__nav--next"),
@@ -101,6 +101,17 @@ document.addEventListener("DOMContentLoaded", () => {
       navigation: {
         nextEl: wrapper.querySelector(".sales__slider-nav--next"),
         prevEl: wrapper.querySelector(".sales__slider-nav--prev"),
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: "auto",
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+        },
       },
     });
   };
