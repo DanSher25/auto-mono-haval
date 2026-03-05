@@ -3,7 +3,7 @@ import IMask from "imask";
 import Swiper from "swiper";
 import { Navigation, EffectFade, Pagination, Autoplay } from "swiper/modules";
 
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "@fancyapps/ui/dist/fancybox.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -175,7 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   Fancybox.bind("[data-fancybox], [data-fancybox-trigger]", {
-    closeButton: true,
     autoFocus: false,
     on: {
       done: () => {
